@@ -1,29 +1,44 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import project1 from "../Assets/project1.png";
+import comingsoon from "../Assets/comingsoon.jpg";
+
 const projects = [
   {
     role: "Frontend Developer",
-    company: "Awura Tech",
+    company: "Awura",
     date: "Aug 2022 – Present",
     description: "I work on designing and developing user-friendly, responsive websites and applications with a focus on UI/UX design and modern frontend technologies.",
-    imageSrc: {project1},
-    link: "https://awura-tech.com",
+    imageSrc: project1,
+    link: "https://awura.tech/",
+    name: "Awura",
+    content: "A sleek, modern, and responsive website designed to represent Awura’s brand identity.",
+    github: "https://github.com/bettyhabtesh/AwuraWebsite",
   },
   {
-    role: "UI/UX Designer",
-    company: "Company 2",
-    date: "Jan 2021 – Jul 2022",
+    role: "UI/UX Designer and Frontend Developer",
+    company: "Awura",
+    date: "Aug 2022 – Present",
     description: "Worked on various UI/UX projects with a focus on usability and design aesthetics.",
-    imageSrc: "/path/to/your/image2.png",
-    link: "https://company2.com",
+    imageSrc: comingsoon,
+    link: "https://awura.tech/",
+    name: "Africa Jewel's Tour",
+    content: "Coming soon...",
+    github: "https://awura.tech/",
   },
   {
     role: "Web Developer",
-    company: "Company 3",
-    date: "Jul 2020 – Dec 2020",
+    company: "Awura",
+    date: "Aug 2022 – Present",
     description: "Developed and maintained websites using the latest web technologies.",
-    imageSrc: "/path/to/your/image3.png",
-    link: "https://company3.com",
+    imageSrc: comingsoon,
+    link: "https://awura.tech/",
+    name: "Ethio Binamr",
+    content: "A sleek, modern, and responsive website designed to represent Company 3’s brand identity.",
+    github: "https://awura.tech/",
   },
 ];
 
@@ -31,45 +46,74 @@ const ProjectsPage = () => {
   const [activeProject, setActiveProject] = useState(0);
 
   return (
-    <div className="flex flex-col items-center bg-gray-900 text-white min-h-screen p-10">
-      <h1 className="text-4xl font-bold mb-4">Projects</h1>
-      <p className="text-center mb-8">
+    <div id="projects" className="flex flex-col items-center bg-[#1E1A1E] text-white min-h-screen p-10">
+      {/* Title Section */}
+      <h1 className="text-4xl font-bold mt-16 mb-4">Projects .</h1>
+      <p className="text-center text-gray-300 mb-8 max-w-2xl">
         As a passionate UI/UX designer and frontend developer, I have gained valuable skills and experience across a variety of projects.
       </p>
 
-      <div className="flex flex-row gap-8 w-full">
-        {/* Left Side - Scrollable Text */}
-        <div className="flex flex-col gap-4 overflow-y-scroll h-96 p-4 bg-gray-800 rounded-lg w-1/3">
+      <div className="flex flex-row gap-10 w-full mt-8">
+        {/* Left Side - Scrollable List */}
+        <motion.div
+          className="flex flex-col gap-4 overflow-y-scroll h-[300px] w-1/3 scrollbar-hide "
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           {projects.map((project, index) => (
             <div
               key={index}
               onClick={() => setActiveProject(index)}
-              className={`cursor-pointer ${activeProject === index ? "text-purple-400" : "text-gray-400"} hover:text-purple-400 transition duration-300`}
+              className={`cursor-pointer p-4 ${
+                activeProject === index ? "text-white border-l-4 border-[#1E1A1E]" : "text-gray-400"
+              } hover:text-white transition duration-300`}
             >
-              <h3 className="text-xl font-semibold">{project.role}</h3>
-              <p className="text-sm">{project.company}</p>
-              <p className="text-xs">{project.date}</p>
+              <h3 className="text-2xl">{project.role}</h3>
+              <p className="text-xl text-[#F3AFF3]">{project.company}</p>
+              <p>{project.date}</p>
               <p className="mt-2">{project.description}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* Right Side - Image with Hover Icons */}
-        <div className="relative w-2/3">
-          <a href={projects[activeProject].link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-full">
+        {/* Right Side - Image and Text Box */}
+        <motion.div
+          className="relative w-2/3 flex flex-col items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Centered Image */}
+          <a
+            href={projects[activeProject].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative w-full mb-6"
+          >
             <img
               src={projects[activeProject].imageSrc}
               alt={projects[activeProject].role}
-              className="w-full h-full object-cover rounded-lg transition-transform transform hover:scale-105"
+              className="w-[600px] h-[300px] object-cover rounded-lg transition-transform transform hover:scale-105"
             />
-            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <div className="flex space-x-4 text-2xl text-white">
-                <i className="fab fa-github hover:text-purple-400 cursor-pointer"></i>
-                <i className="fas fa-link hover:text-purple-400 cursor-pointer"></i>
-              </div>
-            </div>
           </a>
-        </div>
+
+          {/* Text Box aligned to the top-right of the image */}
+          <div className="absolute right-[-2px] bg-[#2A232A] p-4 rounded-lg w-1/3 text-left transition-all transform hover:border-[#F3AFF3] border-r-4 border-b-4 border-transparent hover:shadow-xl group">
+            <h3 className="text-2xl font-semibold text-[#F3AFF3]">{projects[activeProject].name}</h3>
+            <p className="mt-2 text-gray-300">{projects[activeProject].content}</p>
+
+            {/* Icon Section (Hidden by default, shown on hover) */}
+            <div className="mt-4 flex space-x-4 text-2xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href={projects[activeProject].github} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} className="hover:text-[#F3AFF3] cursor-pointer" />
+              </a>
+              <a href={projects[activeProject].link} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLink} className="hover:text-[#F3AFF3] cursor-pointer" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

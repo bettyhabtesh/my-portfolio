@@ -3,7 +3,7 @@ import { FaLaptopCode, FaPaintBrush, FaMobileAlt } from "react-icons/fa"; // Ass
 
 const Services = () => {
   return (
-    <section className="bg-[#111] text-white py-20 px-10">
+    <section id="services" className="bg-[#111] text-white py-20 px-10">
       {/* Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold">Services .</h2>

@@ -1,15 +1,24 @@
-import React from "react"; 
+import React from "react";
 import illustration from "../Assets/illustration.svg";
+import cvFile from "../Assets/BethelhemHabtamuOfficial.pdf"; // Make sure to replace with the correct file path
 
 const AboutMe = () => {
+  const handleScrollToContact = () => {
+    // Scroll to the ContactMe section with smooth behavior
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="bg-[#221922] text-white py-10 px-10 flex flex-col md:flex-row items-center justify-center">
+    <section id="about" className="bg-[#221922] text-white py-10 px-10 flex flex-col md:flex-row items-center justify-center">
       {/* Image/Illustration */}
       <div className="flex justify-center md:justify-start mb-5 md:mb-0 md:mr-16">
         <img
-          src={illustration} 
+          src={illustration}
           alt="Illustration"
-          className="w-80 h-80 md:w-[450px] md:h-[450px] -ml-5" // Increased width and height for desktop, shifted slightly left
+          className="w-80 h-80 md:w-[450px] md:h-[450px] -ml-5"
         />
       </div>
 
@@ -19,19 +28,24 @@ const AboutMe = () => {
         <p className="text-[#F3AFF3] text-lg mb-4">UI/UX Designer and Frontend Developer</p>
         
         <p className="text-[#E0E0E0] mb-8">
-          Random saying could be harmful to anyone for any place at anytime.
-          Random saying could be harmful to anyone for any place at anytime.
-          Random saying could be harmful to anyone for any place at anytime.
+        I’m a UI/UX designer and frontend React developer with a focus on creating seamless, user-centered experiences.I’m passionate about blending design and functionality to craft digital solutions that are both beautiful and intuitive. My work is influenced by Ethiopia’s vibrant culture, and I’m always eager to learn, grow, and take on new challenges. Let’s connect and bring ideas to life!
         </p>
 
         {/* Buttons */}
-        <div className="flex justify-center md:justify-start space-x-10"> {/* Increased spacing between buttons */}
-          <button className="border border-[#F3AFF3] text-[#F3AFF3] py-2 px-6 rounded-md hover:bg-[#F3AFF3] hover:text-black transition-colors">
+        <div className="flex justify-center md:justify-start space-x-10">
+          <button
+            onClick={handleScrollToContact} // Trigger the scroll function
+            className="border border-[#F3AFF3] text-[#F3AFF3] py-2 px-6 rounded-md hover:bg-[#F3AFF3] hover:text-black transition-colors"
+          >
             Contact Me
           </button>
-          <button className="border border-[#F3AFF3] text-[#F3AFF3] py-2 px-6 rounded-md hover:bg-[#F3AFF3] hover:text-black transition-colors">
+          <a
+            href={cvFile} // Link to CV file
+            download="BethelhemHabtamuCV.pdf" // The file will be downloaded with this name
+            className="border border-[#F3AFF3] text-[#F3AFF3] py-2 px-6 rounded-md hover:bg-[#F3AFF3] hover:text-black transition-colors"
+          >
             Download CV
-          </button>
+          </a>
         </div>
       </div>
     </section>
