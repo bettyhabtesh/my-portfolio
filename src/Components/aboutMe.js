@@ -1,6 +1,6 @@
 import React from "react";
 import illustration from "../Assets/illustration.svg";
-import cvFile from "../Assets/BethelhemHabtamuOfficial.pdf"; // Make sure to replace with the correct file path
+import cvFile from "../Assets/BethelhemHabtamuOfficial.pdf"; 
 
 const AboutMe = () => {
   const handleScrollToContact = () => {

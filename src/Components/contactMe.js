@@ -51,25 +51,31 @@ const ContactMe = () => {
   };
 
   return (
-    <section id="contact" className="flex flex-col items-center bg-[#121212] p-8 text-white font-montserrat">
-      <h1 className="text-4xl font-bold mb-4">Contact me .</h1>
-      <form className="flex flex-col w-full max-w-2xl space-y-4" onSubmit={handleSubmit}>
-        <div className="flex gap-4 mt-4">
+    <section
+      id="contact"
+      className="flex flex-col items-center bg-[#121212] p-6 md:p-8 text-white font-montserrat"
+    >
+      <h1 className="text-3xl md:text-4xl font-bold mb-6">Contact me .</h1>
+      <form
+        className="flex flex-col w-full max-w-md md:max-w-2xl space-y-4"
+        onSubmit={handleSubmit}
+      >
+        <div className="flex flex-col md:flex-row gap-4">
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
             placeholder="Name"
-            className="w-[465px] h-[83px] bg-[#342b34] text-[#f3aff3] border-none rounded-lg p-4 focus:outline-none"
+            className="w-full md:w-1/2 h-12 md:h-16 bg-[#342b34] text-[#f3aff3] border-none rounded-lg p-4 focus:outline-none"
           />
-          <input 
+          <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
             placeholder="Email"
-            className="w-[465px] h-[83px] bg-[#342b34] text-[#f3aff3] border-none rounded-lg p-4 focus:outline-none"
+            className="w-full md:w-1/2 h-12 md:h-16 bg-[#342b34] text-[#f3aff3] border-none rounded-lg p-4 focus:outline-none"
           />
         </div>
         <textarea
@@ -77,12 +83,12 @@ const ContactMe = () => {
           value={formData.message}
           onChange={handleInputChange}
           placeholder="Message"
-          className="h-[200px] bg-[#342b34] text-[#f3aff3] border-none rounded-lg p-4 focus:outline-none resize-none"
+          className="h-32 md:h-48 bg-[#342b34] text-[#f3aff3] border-none rounded-lg p-4 focus:outline-none resize-none w-full"
         ></textarea>
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-24 bg-transparent text-[#f3aff3] border border-[#f3aff3] p-2 rounded-lg hover:bg-[#f3aff3] hover:text-[#121212] transition-colors"
+          className="w-full md:w-24 bg-transparent text-[#f3aff3] border border-[#f3aff3] p-2 rounded-lg hover:bg-[#f3aff3] hover:text-[#121212] transition-colors"
         >
           {isSubmitting ? "Sending..." : "Submit"}
         </button>
