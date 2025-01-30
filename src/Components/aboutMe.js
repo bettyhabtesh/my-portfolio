@@ -1,5 +1,5 @@
 import React from "react";
-import illustration from "../Assets/illustration.svg";
+import output from "../Assets/output.png";
 import cvFile from "../Assets/BethelhemHabtamuOfficial.pdf"; 
 
 const AboutMe = () => {
@@ -16,7 +16,7 @@ const AboutMe = () => {
       {/* Image/Illustration */}
       <div className="flex justify-center md:justify-start mb-5 md:mb-0 md:mr-16">
         <img
-          src={illustration}
+          src={output}
           alt="Illustration"
           className="w-80 h-80 md:w-[450px] md:h-[450px] -ml-5"
         />
@@ -50,6 +50,6 @@ const AboutMe = () => {
       </div>
     </section>
   );
-};
+}; 
 
 export default AboutMe;
