@@ -64,7 +64,7 @@ const HeroSection = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center lg:justify-start space-x-6 mt-8">
-          <a href="https://awura.slack.com/team/U063R5N60US" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#AA99AA]/[0.17] text-[#F3AFF3] text-2xl hover:bg-[#F3AFF3] hover:text-black transition-colors">
+          <a href="https://bethelhemhabtamu.slack.com/" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#AA99AA]/[0.17] text-[#F3AFF3] text-2xl hover:bg-[#F3AFF3] hover:text-black transition-colors">
             <FontAwesomeIcon icon={faSlack} />
           </a>
           <a href="https://www.linkedin.com/in/bethelhem-habtamu-b9b637261/" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#AA99AA]/[0.17] text-[#F3AFF3] text-2xl hover:bg-[#F3AFF3] hover:text-black transition-colors">
@@ -76,7 +76,7 @@ const HeroSection = () => {
           <a href="https://t.me/betty_habtesh" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#AA99AA]/[0.17] text-[#F3AFF3] text-2xl hover:bg-[#F3AFF3] hover:text-black transition-colors">
             <FontAwesomeIcon icon={faTelegramPlane} />
           </a>
-          <a href="https://www.behance.net/bethelhhabtamu" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#AA99AA]/[0.17] text-[#F3AFF3] text-2xl hover:bg-[#F3AFF3] hover:text-black transition-colors">
+          <a href="https://www.behance.net/bethelhemhabtamu" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#AA99AA]/[0.17] text-[#F3AFF3] text-2xl hover:bg-[#F3AFF3] hover:text-black transition-colors">
             <FontAwesomeIcon icon={faBehance} />
           </a>
         </div>
