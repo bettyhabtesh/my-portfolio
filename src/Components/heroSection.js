@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTelegramPlane, faSlack, faBehance } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -12,34 +13,29 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="bg-black text-white h-screen flex flex-col justify-between">
+      <Helmet>
+        <title>Bethelhem Habtamu | Frontend Developer</title>
+        <meta name="description" content="Bethelhem Habtamu is a frontend developer who creates visually stunning, user-friendly digital experiences. Explore her portfolio and projects." />
+        <meta property="og:title" content="Bethelhem Habtamu | Frontend Developer" />
+        <meta property="og:description" content="Creating smooth, engaging user interfaces with a passion for design and usability." />
+        <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+        <meta property="og:url" content="https://yourdomain.com" />
+      </Helmet>
+
       {/* Navbar */}
       <nav className="flex justify-between items-center p-6 md:p-10">
-        {/* Logo */}
         <div className="text-4xl font-palette-mosaic text-[#F3AFF3] ml-4 md:ml-20">BH</div>
-
-        {/* Menu Items for Desktop */}
         <ul className="hidden lg:flex space-x-8 text-lg">
-          <li>
-            <a href="#about" className="hover:text-[#F3AFF3] cursor-pointer">About</a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-[#F3AFF3] cursor-pointer">Services</a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-[#F3AFF3] cursor-pointer">Project</a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-[#F3AFF3] cursor-pointer">Contact</a>
-          </li>
+          <li><a href="#about" className="hover:text-[#F3AFF3] cursor-pointer">About</a></li>
+          <li><a href="#services" className="hover:text-[#F3AFF3] cursor-pointer">Services</a></li>
+          <li><a href="#projects" className="hover:text-[#F3AFF3] cursor-pointer">Project</a></li>
+          <li><a href="#contact" className="hover:text-[#F3AFF3] cursor-pointer">Contact</a></li>
         </ul>
-
-        {/* Hamburger Icon for Mobile & Tablet */}
         <div className="lg:hidden text-[#F3AFF3] text-2xl cursor-pointer" onClick={toggleMenu}>
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden absolute top-20 left-0 w-full bg-black text-white flex flex-col items-center py-6 space-y-4">
           <a href="#about" className="hover:text-[#F3AFF3] cursor-pointer" onClick={toggleMenu}>About</a>
@@ -52,12 +48,8 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="flex flex-col justify-center flex-grow p-6 md:p-10 lg:ml-96 lg:p-20 text-center lg:text-left">
         <p className="text-sm md:text-base text-[#F3AFF3] mb-2">Hi, my name is</p>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-2">
-          Bethelhem Habtamu
-        </h1>
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-4">
-          I am a frontend Developer.
-        </h2>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-2">Bethelhem Habtamu</h1>
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-4">I am a frontend Developer.</h2>
         <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#E0E0E0] max-w-lg mx-auto lg:mx-0">
           I love combining aesthetics with functionality to build smooth, engaging digital experiences that connect with users. Welcome to my portfolio!
         </p>
