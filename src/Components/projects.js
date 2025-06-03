@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -51,100 +52,120 @@ const ProjectsPage = () => {
   const [activeProject, setActiveProject] = useState(0);
 
   return (
-    <div
-      id="projects"
-      className="flex flex-col items-center bg-[#1E1A1E] text-white min-h-screen p-6 md:p-10"
-    >
-      {/* Title Section */}
-      <h1 className="text-3xl md:text-4xl font-bold mt-16 mb-4">Projects .</h1>
-      <p className="text-center text-gray-300 mb-8 max-w-xl md:max-w-2xl">
-        As a passionate UI/UX designer and frontend developer, I have gained
-        valuable skills and experience across a variety of projects.
-      </p>
+    <>
+      <Helmet>
+        <title>Projects | Bethelhem Habtamu</title>
+        <meta
+          name="description"
+          content="Explore a collection of UI/UX design and frontend development projects by Bethelhem Habtamu, including work on Awura, Africa Jewel's Tour, and content creation for websites."
+        />
+        <meta
+          name="keywords"
+          content="Bethelhem Habtamu projects, UI/UX design, frontend development, React portfolio, Awura, Africa's Jewel Tour, web content"
+        />
+        <meta name="author" content="Bethelhem Habtamu" />
+        <meta property="og:title" content="Projects | Bethelhem Habtamu" />
+        <meta
+          property="og:description"
+          content="Portfolio of React and design projects built by Bethelhem Habtamu."
+        />
+        <meta property="og:image" content={projects[activeProject].imageSrc} />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
-      <div className="flex flex-col md:flex-row gap-6 md:gap-10 w-full mt-8">
-        {/* Left Side - Scrollable List */}
-        <motion.div
-          className="flex flex-col gap-4 overflow-y-auto h-[300px] md:h-[400px] w-full md:w-1/3 scrollbar-hide"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              onClick={() => setActiveProject(index)}
-              className={`cursor-pointer p-4 ${
-                activeProject === index
-                  ? "text-white border-l-4 border-[#1E1A1E]"
-                  : "text-gray-400"
-              } hover:text-white transition duration-300`}
-            >
-              <h3 className="text-lg md:text-2xl">{project.role}</h3>
-              <p className="text-md md:text-xl text-[#F3AFF3]">
-                {project.company}
-              </p>
-              <p>{project.date}</p>
-              <p className="mt-2">{project.description}</p>
-            </div>
-          ))}
-        </motion.div>
+      <div
+        id="projects"
+        className="flex flex-col items-center bg-[#1E1A1E] text-white min-h-screen p-6 md:p-10"
+      >
+        <h1 className="text-3xl md:text-4xl font-bold mt-16 mb-4">Projects .</h1>
+        <p className="text-center text-gray-300 mb-8 max-w-xl md:max-w-2xl">
+          As a passionate UI/UX designer and frontend developer, I have gained
+          valuable skills and experience across a variety of projects.
+        </p>
 
-        {/* Right Side - Image and Text Box */}
-        <motion.div
-          className="relative w-full md:w-2/3 flex flex-col items-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Centered Image */}
-          <a
-            href={projects[activeProject].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block relative w-full mb-6"
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 w-full mt-8">
+          <motion.div
+            className="flex flex-col gap-4 overflow-y-auto h-[300px] md:h-[400px] w-full md:w-1/3 scrollbar-hide"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <img
-              src={projects[activeProject].imageSrc}
-              alt={projects[activeProject].role}
-              className="w-full max-w-md md:max-w-lg h-[200px] md:h-[300px] object-cover rounded-lg transition-transform transform hover:scale-105"
-            />
-          </a>
-
-          {/* Text Box aligned to the top-right of the image */}
-          <div className="absolute right-0 md:right-[-2px] bg-[#2A232A] p-4 rounded-lg w-full md:w-1/3 text-left transition-all transform hover:border-[#F3AFF3] border-r-4 border-b-4 border-transparent hover:shadow-xl group">
-            <h3 className="text-lg md:text-2xl font-semibold text-[#F3AFF3]">
-              {projects[activeProject].name}
-            </h3>
-            <p className="mt-2 text-gray-300">{projects[activeProject].content}</p>
-
-            {/* Icon Section (Hidden by default, shown on hover) */}
-            <div className="mt-4 flex space-x-4 text-xl md:text-2xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <a
-                href={projects[activeProject].github}
-                target="_blank"
-                rel="noopener noreferrer"
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveProject(index)}
+                className={`cursor-pointer p-4 ${
+                  activeProject === index
+                    ? "text-white border-l-4 border-[#1E1A1E]"
+                    : "text-gray-400"
+                } hover:text-white transition duration-300`}
               >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="hover:text-[#F3AFF3] cursor-pointer"
-                />
-              </a>
-              <a
-                href={projects[activeProject].link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon
-                  icon={faLink}
-                  className="hover:text-[#F3AFF3] cursor-pointer"
-                />
-              </a>
+                <h3 className="text-lg md:text-2xl">{project.role}</h3>
+                <p className="text-md md:text-xl text-[#F3AFF3]">
+                  {project.company}
+                </p>
+                <p>{project.date}</p>
+                <p className="mt-2">{project.description}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="relative w-full md:w-2/3 flex flex-col items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <a
+              href={projects[activeProject].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative w-full mb-6"
+            >
+              <img
+                src={projects[activeProject].imageSrc}
+                alt={projects[activeProject].role}
+                className="w-full max-w-md md:max-w-lg h-[200px] md:h-[300px] object-cover rounded-lg transition-transform transform hover:scale-105"
+              />
+            </a>
+
+            <div className="absolute right-0 md:right-[-2px] bg-[#2A232A] p-4 rounded-lg w-full md:w-1/3 text-left transition-all transform hover:border-[#F3AFF3] border-r-4 border-b-4 border-transparent hover:shadow-xl group">
+              <h3 className="text-lg md:text-2xl font-semibold text-[#F3AFF3]">
+                {projects[activeProject].name}
+              </h3>
+              <p className="mt-2 text-gray-300">
+                {projects[activeProject].content}
+              </p>
+
+              <div className="mt-4 flex space-x-4 text-xl md:text-2xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {projects[activeProject].github && (
+                  <a
+                    href={projects[activeProject].github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="hover:text-[#F3AFF3] cursor-pointer"
+                    />
+                  </a>
+                )}
+                <a
+                  href={projects[activeProject].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLink}
+                    className="hover:text-[#F3AFF3] cursor-pointer"
+                  />
+                </a>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
