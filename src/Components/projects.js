@@ -12,11 +12,11 @@ const projects = [
   {
     role: "Frontend Developer",
     company: "Awura",
-    date: "Aug 2022 – Present",
+    date: "Aug 2022 – Aug 2024",
     description:
       "I work on designing and developing user-friendly, responsive websites and applications with a focus on UI/UX design and modern frontend technologies.",
     imageSrc: project1,
-    link: "https://awura.tech/",
+    link: "https://awura-website.vercel.app/",
     name: "Awura",
     content:
       "A sleek, modern, and responsive website designed to represent Awura’s brand identity.",
@@ -25,7 +25,7 @@ const projects = [
   {
     role: "UI/UX Designer and Frontend Developer",
     company: "Awura",
-    date: "Aug 2022 – Present",
+    date: "Aug 2022 – Aug 2024",
     description:
       "Worked on various UI/UX projects with a focus on usability and design aesthetics.",
     imageSrc: admin,
