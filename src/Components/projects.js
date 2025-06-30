@@ -16,7 +16,7 @@ const projects = [
     description:
       "I work on designing and developing user-friendly, responsive websites and applications with a focus on UI/UX design and modern frontend technologies.",
     imageSrc: project1,
-    link: "https://awura.tech/",
+    link: "https://awura-website.vercel.app/",
     name: "Awura",
     content:
       "A sleek, modern, and responsive website designed to represent Awura’s brand identity.",
