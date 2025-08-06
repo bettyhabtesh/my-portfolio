@@ -20,6 +20,11 @@ const ContactMe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Validation: check if all fields are filled
+    if (!formData.name || !formData.email || !formData.message) {
+      setResponseMessage("Please fill in all fields before submitting.");
+      return;
+    }
     setIsSubmitting(true);
 
     try {

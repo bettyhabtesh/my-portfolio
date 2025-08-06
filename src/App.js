@@ -7,9 +7,11 @@ import ProjectsPage from './Components/projects';
 import ContactMe from './Components/contactMe';
 import Footer from './Components/footer';
 import './style.css';
+import SplashCursor from './animation/SplashCursor';
 function App() {
   return (
     <div className="App font-montserrat">
+      <SplashCursor/>
       <HeroSection/>
       <AboutMe/>
       <Services/>
