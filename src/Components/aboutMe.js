@@ -63,7 +63,7 @@ const AboutMe = () => {
           <img
             src={output}
             alt="Illustration"
-           className="w-68 sm:w-88 md:w-[460px] md:h-[460px] object-contain"  />
+           className="w-[200px] sm:w-[280px] md:w-[540px] md:h-[540px] object-contain" />
         </motion.div>
 
         {/* Text Content */}
