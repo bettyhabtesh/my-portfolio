@@ -62,7 +62,7 @@ const AboutMe = () => {
         >
           <img
             src={output}
-            alt="Illustration"
+            alt="Bethelhem Habtamu"
            className="w-[200px] sm:w-[280px] md:w-[540px] md:h-[540px] object-contain" />
         </motion.div>
 

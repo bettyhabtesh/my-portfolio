@@ -33,8 +33,8 @@ const HeroSection = () => {
         <meta name="description" content="Bethelhem Habtamu is a frontend developer who creates visually stunning, user-friendly digital experiences. Explore her portfolio and projects." />
         <meta property="og:title" content="Bethelhem Habtamu | Frontend Developer" />
         <meta property="og:description" content="Creating smooth, engaging user interfaces with a passion for design and usability." />
-        <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:image" content="https://bettyhabtesh.vercel.app/static/media/output.e06816dc77b98bcec988.png" />
+        <meta property="og:url" content="https://bettyhabtesh.vercel.app/" />
       </Helmet>
 
       {/* Navbar */}
