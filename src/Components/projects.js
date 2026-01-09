@@ -7,7 +7,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import project1 from "../Assets/project1.png";
 import web from "../Assets/web.png";
 import admin from "../Assets/admin.png";
-import ethio from "../Assets/ethio.png"
+import ethio from "../Assets/ethio.png";
+import hire from "../Assets/hire.png";
+import rapid from "../Assets/rapid.png";
 
 const projects = [
   {
@@ -22,6 +24,32 @@ const projects = [
     content:
       "Digitalizing Ethiopian Lottery! We didn’t just digitize a lottery, we redefined how millions play, win, and experience luck.",
     github: "https://github.com/bettyhabtesh/ ",
+  },
+  {
+    role: "Frontend Developer",
+    company: "Freelancing",
+    date: "2024 – Present",
+    description:
+      "Developed a modern bathroom showcasing website that displays a wide range of bathroom designs and products. Built with responsive design and intuitive navigation to help users explore and visualize different bathroom styles and fixtures.",
+    imageSrc: rapid,
+    link: "https://www.rapidobathrooms.com/",
+    name: "Rapido Bathrooms",
+    content:
+      "A beautiful and modern website showcasing bathroom designs, fixtures, and products. Features an elegant interface for browsing and exploring various bathroom styles and collections.",
+    github: "https://github.com/bettyhabtesh/",
+  },
+  {
+    role: "Frontend Developer",
+    company: "Freelancing",
+    date: "2024 – Present",
+    description:
+      "Developed a modern hiring platform with a focus on connecting employers with talented professionals. Built responsive interfaces and implemented user-friendly features for job postings and candidate management.",
+    imageSrc: hire,
+    link: "https://hirearky.com/",
+    name: "HireArky Platform",
+    content:
+      "A comprehensive hiring platform designed to streamline the recruitment process and connect employers with top talent.",
+    github: "https://github.com/bettyhabtesh/",
   },
   {
     role: "Frontend Developer",
@@ -59,7 +87,7 @@ const projects = [
     name: "Content For Websites",
     content:
       "Created and managed content for its website and app, ensuring an engaging and informative user experience.",
-  },
+  }
 ];
 
 const ProjectsPage = () => {
