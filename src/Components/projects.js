@@ -11,7 +11,7 @@ import ethio from "../Assets/ethio.png";
 import hire from "../Assets/hire.png";
 import rapid from "../Assets/rapid.png";
 import hamnel from "../Assets/hamnel.png";
-
+import ares from "../Assets/ares.png";
 const projects = [
   {
     role: "Frontend Developer",
@@ -67,6 +67,18 @@ const projects = [
   },
   {
     role: "Frontend Developer",
+    company: "Sidekick Studios",
+    date: "Feb 2026 – Present",
+    description:
+      "Developed Ares, a fully customizable AI-powered dual dashboard productivity platform for personal and business management.",
+    imageSrc: ares,
+    link: "https://ares-rosy.vercel.app/",
+    name: "Ares",
+    content:
+      "A fully customizable AI-powered dual dashboard productivity platform for personal and business management.",
+  },
+  {
+    role: "Frontend Developer",
     company: "Awura",
     date: "Aug 2022 – Aug 2024",
     description:
@@ -85,7 +97,7 @@ const projects = [
     description:
       "Worked on various UI/UX projects with a focus on usability and design aesthetics.",
     imageSrc: admin,
-    link: "https://portal.africasjeweltour.com/ ",
+    link: "https://africasjeweltour.com/ ",
     name: "Africa Jewel's Tour Admin Page",
     content:
       "The AJT Admin Portal is a management dashboard for handling tour packages, destinations, blogs, and user interactions efficiently.",
@@ -214,14 +226,14 @@ const ProjectsPage = () => {
               href={projects[activeProject].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block relative w-full mb-6"
+              className="relative w-full mb-6"
             >
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeProject}
                   src={projects[activeProject].imageSrc}
                   alt={"Bethelhem Habtamu"}
-                  className="w-full max-w-full md:max-w-3xl h-[250px] md:h-[400px] object-fit rounded-lg"
+                  className="w-full max-w-full md:max-w-3xl max-h-[300px] md:max-h-[500px] object-contain rounded-lg"
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -10, opacity: 0 }}
