@@ -10,6 +10,7 @@ import admin from "../Assets/admin.png";
 import ethio from "../Assets/ethio.png";
 import hire from "../Assets/hire.png";
 import rapid from "../Assets/rapid.png";
+import hamnel from "../Assets/hamnel.png";
 
 const projects = [
   {
@@ -28,7 +29,7 @@ const projects = [
   {
     role: "Frontend Developer",
     company: "Freelancing",
-    date: "2024 – Present",
+    date: "2026",
     description:
       "Developed a modern bathroom showcasing website that displays a wide range of bathroom designs and products. Built with responsive design and intuitive navigation to help users explore and visualize different bathroom styles and fixtures.",
     imageSrc: rapid,
@@ -36,6 +37,19 @@ const projects = [
     name: "Rapido Bathrooms",
     content:
       "A beautiful and modern website showcasing bathroom designs, fixtures, and products. Features an elegant interface for browsing and exploring various bathroom styles and collections.",
+    github: "https://github.com/bettyhabtesh/",
+  },
+  {
+    role: "Frontend Developer",
+    company: "Freelancing",
+    date: "2026",
+    description:
+      "Developed a modern beauty website that displays a portfolio of a makeup artist. Built with responsive design and intuitive navigation to help users explore and view the makeup artist's work and get in touch with her for the services she offers.",
+    imageSrc: hamnel,
+    link: "https://hanberry-umber.vercel.app/",
+    name: "Hanberry Beauty",
+    content:
+      "A modern beauty website showcasing a makeup artist's portfolio and services. Features an elegant interface for browsing and exploring the makeup artist's work and getting in touch for services.",
     github: "https://github.com/bettyhabtesh/",
   },
   {
