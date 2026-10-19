@@ -12,6 +12,7 @@ import hire from "../Assets/hire.png";
 import rapid from "../Assets/rapid.png";
 import hamnel from "../Assets/hamnel.png";
 import ares from "../Assets/ares.png";
+import lib from "../Assets/lib.png";
 const projects = [
   {
     role: "Frontend Developer",
@@ -25,6 +26,19 @@ const projects = [
     content:
       "Digitalizing Ethiopian Lottery! We didn’t just digitize a lottery, we redefined how millions play, win, and experience luck.",
     github: "https://github.com/bettyhabtesh/ ",
+  },
+    {
+    role: "Frontend Developer",
+    company: "Personal Project",
+    date: "Aug 2026",
+    imageSrc: lib,
+    description:
+      "A beautiful, themed analog React time picker with cute built-in styles, TypeScript support, and a clean customizable API.",
+    link: "https://www.npmjs.com/package/cool-cute-react-time-picker",
+    name: "Cool and cute react time picker(React Library)",
+    content:
+      "Time picking, but make it cute - Analog clock selection, twelve distinctive built-in themes, full TypeScript support, and a polished API you can drop into any React web app.",
+    github: "https://github.com/bettyhabtesh/cool-cute-react-time-picker"  
   },
   {
     role: "Frontend Developer",
